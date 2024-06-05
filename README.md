@@ -13,6 +13,19 @@ that string among a collection of strings.
 A *minimum* unique subsequence is the shortest unique subsequence of a string.
 There may be multiple minimum unique subsequences.
 
+## Problem
+> Given some strings, find the *minimum unique subsequence(s)* for each string,
+ignoring whitespace and capitalization.
+
+### Inputs
+A list of lowercase strings with whitespace removed.
+
+### Output
+A dictionary whose keys are the input strings and values are sets of 
+minimum unique subsequences. Input strings that are empty should not be
+present in the output. Strings that don't have a minimum unique subsequence
+should be present with value empty set.
+
 ## Properties
 A string $s$ of length $n$ has $2^n-1$ subsquences. There are 2 choices for 
 each character (included or not included in the subsequence) so there are

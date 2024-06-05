@@ -5,7 +5,6 @@ def get_all_subsequences(s: str) -> list:
     result = []
     for i, c in enumerate(s):
         subseqs = get_all_subsequences(s[i+1:])
-        result.append(c)
-        for subseq in subseqs:
-            result.append(c+subseq)
+        result += [c]
+        result += [c + subseq for subseq in subseqs]
     return result
